@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('partidas', function (Blueprint $table) {
             $table->id();
+            $table->date('data_partida')->comment('Data da partida');
+            $table->string('time_casa')->comment('Nome do time da casa');
+            $table->string('time_visitante')->comment('Nome do time visitante');
             $table->timestamps();
         });
     }
